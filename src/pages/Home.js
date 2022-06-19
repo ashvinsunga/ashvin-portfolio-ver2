@@ -36,7 +36,7 @@ function Home() {
     <Layout>
       <div>
         {/* Intro section */}
-        <div className="h-screen pt-24 bg-theme">
+        <section id="intro" className="h-screen pt-24 bg-theme">
           <div
             className="grid grid-cols-2 h-5/6 items-center border-4 md:grid-cols-1  md:border-0
             mx-32 z-10 bg-theme
@@ -117,10 +117,10 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Technologies */}
-        <div className="mt-20">
+        <section id="tech" className="pt-20">
           <h1
             className="text-4xl md:text-2xl text-blue-800 font-bold text-center"
             data-aos="slide-up"
@@ -201,85 +201,99 @@ function Home() {
               className="w-full text-center mt-20 "
             />
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Project */}
-      <div className="mt-20">
-        <div className="font-bold text-center bg-red-500 mx-20 p-2 text-white rounded-tl-full rounded-br-full md:mt-10 md:mx-5">
-          <h1 className="text-3xl md:text-3xl" data-aos="slide-left">
-            PROJECTS
-          </h1>
-          <h1 className="text-3xl md:text-3xl" data-aos="slide-right">
-            Here you can find some of the projects I made so far
-          </h1>
-        </div>
-      </div>
-
-      <div className="grid mt-10 md:grid-cols-1 grid-cols-3 items-center justify-center gap-10 mx-20 md:mx-5">
-        {projectsData.map((project) => {
-          return (
-            <div>
-              <div className="relative p-10 border-2 text-center rounded-tr-3xl rounded-bl-3xl border-gray-400">
-                <img
-                  src={project.image}
-                  alt="project1"
-                  className="w-full h-52 text-center"
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center flex-col opacity-0 bg-black hover:opacity-80 rounded-tr-3xl rounded-bl-3xl">
-                  <h1 className="text-4xl font-semibold text-white">
-                    {project.title}
-                  </h1>
-                  <button className="border-2 rounded border-white py-2 hover:bg-green-500 px-5 mt-5 text-white">
-                    DEMO
-                  </button>
-                </div>
-              </div>
+        {/* Projects */}
+        <section id="projects">
+          <div className="pt-5">
+            <div
+              className="bg-orange-500 font-bold text-center my-10 mx-20 p-2 text-white rounded-full md:mt-10 md:mx-5"
+              data-aos="fade-up"
+            >
+              <h1
+                className="text-3xl md:text-3xl"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                MY WORKS
+              </h1>
+              <h1
+                className="text-lg md:text-3xl"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                Here you can find some of the projects I made so far
+              </h1>
             </div>
-          );
-        })}
-      </div>
-
-      {/* Contact */}
-      <div className="grid grid-cols-2 md:grid-cols-1 ">
-        <div className="h-screen mt-10 md:mt-0">
-          <lottie-player
-            src="https://assets10.lottiefiles.com/packages/lf20_88z2psap.json"
-            background="transparent"
-            speed="0.5"
-            loop
-            autoplay
-          ></lottie-player>
-        </div>
-
-        <div className="w-screen mt-20 md:-mt-24 md:ml-7">
-          <div className="md:w-5/6 w-2/5 h-80% md:h-fit p-10 shadow-2xl bg-gray-50">
-            <h1 className="text-xl font-semibold">
-              Do you have any questions? You can email me here.
-            </h1>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
-            />
-            <input
-              type="text"
-              placeholder="Email"
-              className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
-            />
-            <textarea
-              rows={5}
-              type="text"
-              placeholder="Message..."
-              className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
-            />
-
-            <button className="bg-red-500 rounded text-white px-5 py-1 mt-3">
-              SUBMIT
-            </button>
           </div>
-        </div>
+
+          <div className="grid mt-10 md:grid-cols-1 grid-cols-3 items-center justify-center gap-10 mx-20 md:mx-5">
+            {projectsData.map((project) => {
+              return (
+                <div key={project.title}>
+                  <div className="relative p-10 border-2 text-center rounded-tr-3xl rounded-bl-3xl border-gray-400">
+                    <img
+                      src={project.image}
+                      alt="project1"
+                      className="w-full h-52 text-center"
+                    />
+
+                    <div className="absolute inset-0 flex items-center justify-center flex-col opacity-0 bg-black hover:opacity-80 rounded-tr-3xl rounded-bl-3xl">
+                      <h1 className="text-4xl font-semibold text-white">
+                        {project.title}
+                      </h1>
+                      <button className="border-2 rounded border-white py-2 hover:bg-green-500 px-5 mt-5 text-white">
+                        DEMO
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="grid grid-cols-2 md:grid-cols-1 pb-20">
+          <div className="h-screen md:mt-0">
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_88z2psap.json"
+              background="transparent"
+              speed="0.5"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+
+          <div className="w-screen mt-20 md:-mt-24 md:ml-7">
+            <div className="md:w-5/6 w-2/5 h-80% md:h-fit p-10 shadow-2xl bg-gray-50">
+              <h1 className="text-l font-semibold">
+                If there's anything you want to know more about me, do not
+                hesitate to contact the number below or send an email.
+              </h1>
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
+              />
+              <textarea
+                rows={5}
+                type="text"
+                placeholder="Message..."
+                className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
+              />
+
+              <button className="bg-yellow-600 rounded text-white px-5 py-1 mt-3 cursor-pointer">
+                SUBMIT
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </Layout>
   );

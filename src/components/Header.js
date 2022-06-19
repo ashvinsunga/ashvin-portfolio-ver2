@@ -1,29 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+
 function Header() {
   const [showMenu, setShowMenu] = useState("md:hidden");
   const menuItems = [
     {
       title: "Home",
-      key: "/",
+      key: "intro",
+    },
+    {
+      title: "Skills",
+      key: "tech",
     },
     {
       title: "Projects",
-      key: "/projects",
-    },
-    {
-      title: "Courses",
-      key: "/courses",
+      key: "projects",
     },
     {
       title: "Contact",
-      key: "/contact",
+      key: "contact",
     },
   ];
 
-  const pathname = window.location.pathname;
-
+  const pathName = window;
+  console.log(pathName);
   return (
     <div className="text-white font-quicksand fixed top-0 left-0 right-0 z-50">
       <div
@@ -55,12 +56,13 @@ function Header() {
           {menuItems.map((item) => {
             return (
               <li
-                className={`list-none mx-5 px-5 hover:bg-white rounded-xl pt-1 hover:text-black hover:animate-pulse duration-150  ${
-                  item.key === pathname &&
-                  "bg-white text-black font-bold rounded-xl p-2"
+                key={item.key}
+                className={`list-none mx-5 px-5 hover:bg-white p-2 rounded-xl hover:text-black hover:animate-pulse duration-150  ${
+                  `#${item.key}` === pathName &&
+                  "bg-white text-black font-bold rounded-xl"
                 }`}
               >
-                <Link to={`${item.key}`}>{item.title}</Link>
+                <a href={`#${item.key}`}>{item.title}</a>
               </li>
             );
           })}
@@ -72,8 +74,9 @@ function Header() {
           {menuItems.map((item) => {
             return (
               <li
+                key={item.key}
                 className={`list-none mt-5 ${
-                  item.key === pathname &&
+                  `#${item.key}` === window.location.hash &&
                   "bg-white text-black rounded-md py-1 px-2 ml-2"
                 }`}
               >
