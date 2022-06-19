@@ -2,7 +2,12 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs } from "react-icons/di";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { SiGmail } from "react-icons/si";
+import {
+  AiOutlineLinkedin,
+  AiOutlineGithub,
+  AiOutlineYahoo,
+} from "react-icons/ai";
 import {
   SiMongodb,
   SiJquery,
@@ -36,7 +41,7 @@ function Home() {
             mx-32 z-10 bg-theme
           border-white "
           >
-            <div className="h-1/2">
+            <div className="h-1/2 justify-items">
               <lottie-player
                 src="https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json"
                 background="transparent"
@@ -54,8 +59,60 @@ function Home() {
               <h1 className="text-4xl md:text-xl" data-aos="slide-left">
                 <b className="text-orange-600">Full Stack Developer</b>
               </h1>
-              <div className="grid grid-cols-3">
-                <AiOutlineLinkedin size={70} />
+              <div className="grid grid-cols-4 place-content-start mt-2 ">
+                <a
+                  href="https://www.linkedin.com/in/ashvin-sunga/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <AiOutlineLinkedin
+                    className="hover:text-yellow-500 cursor-pointer"
+                    size={65}
+                    data-aos="zoom-in"
+                    data-aos-delay="100"
+                  />
+                </a>
+
+                <a
+                  href="https://github.com/ashvinsunga"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {" "}
+                  <AiOutlineGithub
+                    className="hover:text-yellow-500 cursor-pointer"
+                    size={60}
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                  />
+                </a>
+
+                <a
+                  href="mailto:ashvinsunga@yahoo.com.ph"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {" "}
+                  <AiOutlineYahoo
+                    className="hover:text-yellow-500 cursor-pointer"
+                    size={70}
+                    data-aos="zoom-in"
+                    data-aos-delay="500"
+                  />
+                </a>
+
+                <a
+                  href="mailto:ashvinsunga@gmail.com"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <SiGmail
+                    className="hover:text-yellow-500 cursor-pointer"
+                    size={60}
+                    data-aos="zoom-in"
+                    data-aos-delay="700"
+                  />
+                </a>
               </div>
             </div>
           </div>

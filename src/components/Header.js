@@ -56,7 +56,8 @@ function Header() {
             return (
               <li
                 className={`list-none mx-5 px-5 hover:bg-white rounded-xl pt-1 hover:text-black hover:animate-pulse duration-150  ${
-                  item.key === pathname && "bg-white text-black rounded-xl p-2"
+                  item.key === pathname &&
+                  "bg-white text-black font-bold rounded-xl p-2"
                 }`}
               >
                 <Link to={`${item.key}`}>{item.title}</Link>
