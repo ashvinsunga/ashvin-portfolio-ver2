@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 function Header() {
-  const [showMenu, setShowMenu] = useState("md:hidden");
+  const [showMenu, setShowMenu] = useState("sm:hidden");
   const menuItems = [
     {
       title: "Home",
@@ -23,13 +22,19 @@ function Header() {
     },
   ];
 
-  const pathName = window;
-  console.log(pathName);
+  const showHideMenu = () => {
+    if (showMenu === "sm:hidden") {
+      setShowMenu("");
+    } else {
+      setShowMenu("sm:hidden");
+    }
+  };
+
   return (
     <div className="text-white font-quicksand fixed top-0 left-0 right-0 z-50">
       <div
         className={`flex bg-theme justify-between items-center p-2 shadow-lg ${
-          showMenu === "" && "md:flex-col"
+          showMenu === "" && "sm:flex-col"
         } `}
       >
         <div className="flex justify-between items-center w-screen">
@@ -40,27 +45,18 @@ function Header() {
           </a>
 
           <FaBars
-            onClick={() => {
-              if (showMenu === "md:hidden") {
-                setShowMenu("");
-              } else {
-                setShowMenu("md:hidden");
-              }
-            }}
-            className="lg:hidden xl:hidden 2xl:hidden md:flex cursor-pointer"
+            onClick={showHideMenu}
+            className="lg:hidden xl:hidden 2xl:hidden sm:flex cursor-pointer"
           />
         </div>
 
         {/* WEB VIEW */}
-        <div className="flex md:hidden">
+        <div className="flex sm:hidden">
           {menuItems.map((item) => {
             return (
               <li
                 key={item.key}
-                className={`list-none mx-5 hover:bg-white px-2 rounded-xl hover:text-black hover:animate-pulse duration-150  ${
-                  `#${item.key}` === pathName &&
-                  "bg-white text-black font-bold rounded-xl"
-                }`}
+                className="list-none mx-5 hover:bg-white px-2 rounded-xl hover:text-black hover:animate-pulse duration-150"
               >
                 <a href={`#${item.key}`}>{item.title}</a>
               </li>
@@ -69,18 +65,17 @@ function Header() {
         </div>
         {/* MOBILE VIEW */}
         <div
-          className={`mt-5 md:flex items-start justify-start w-screen flex-col lg:hidden 2xl:hidden xl:hidden ${showMenu}`}
+          className={`mt-5 sm:flex items-start justify-start w-full flex-col ${showMenu} lg:hidden 2xl:hidden xl:hidden`}
         >
           {menuItems.map((item) => {
             return (
               <li
                 key={item.key}
-                className={`list-none mt-5 ${
-                  `#${item.key}` === window.location.hash &&
-                  "bg-white text-black rounded-md py-1 px-2 ml-2"
-                }`}
+                className="list-none mt-5 hover:bg-white px-2 rounded-xl hover:text-black hover:animate-pulse duration-150"
               >
-                <Link to={`${item.key}`}>{item.title}</Link>
+                <a onClick={showHideMenu} href={`#${item.key}`}>
+                  {item.title}
+                </a>
               </li>
             );
           })}

@@ -277,26 +277,37 @@ function Home() {
                 If there's anything you want to know more about me, do not
                 hesitate to contact the number below or send an email.
               </h1>
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
-              />
-              <input
-                type="text"
-                placeholder="Email"
-                className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
-              />
-              <textarea
-                rows={5}
-                type="text"
-                placeholder="Message..."
-                className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
-              />
+              <form
+                action="https://formsubmit.co/32e7d5e91ebcbd5ff458886516bd1fc4" //replacement for actual email
+                method="POST"
+              >
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
+                  required
+                />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
+                />
+                <textarea
+                  name="message"
+                  rows={5}
+                  type="text"
+                  placeholder="Message..."
+                  required
+                  className="w-full border-2 border-gray-400 rounded p-1 shadow-lg mt-5"
+                />
 
-              <button className="bg-yellow-600 rounded text-white px-5 py-1 mt-3 cursor-pointer">
-                SUBMIT
-              </button>
+                <button className="bg-yellow-600 rounded text-white px-5 py-1 mt-3 cursor-pointer">
+                  SUBMIT
+                </button>
+              </form>
             </div>
           </div>
         </section>
