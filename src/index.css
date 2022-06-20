@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 15px !important;
+  width: 10px !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 15px;
+  border-radius: 2px;
   background-color: orange;
 }
 

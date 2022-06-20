@@ -32,12 +32,12 @@ function Header() {
           showMenu === "" && "md:flex-col"
         } `}
       >
-        <div className="flex justify-between items-center w-full">
-          <Link to="/">
+        <div className="flex justify-between items-center w-screen">
+          <a href="/#intro">
             <h1 className="text-4xl font-extrabold hover:text-yellow-500 cursor-pointer">
               A S
             </h1>
-          </Link>
+          </a>
 
           <FaBars
             onClick={() => {
@@ -57,7 +57,7 @@ function Header() {
             return (
               <li
                 key={item.key}
-                className={`list-none mx-5 px-5 hover:bg-white p-2 rounded-xl hover:text-black hover:animate-pulse duration-150  ${
+                className={`list-none mx-5 hover:bg-white px-2 rounded-xl hover:text-black hover:animate-pulse duration-150  ${
                   `#${item.key}` === pathName &&
                   "bg-white text-black font-bold rounded-xl"
                 }`}
@@ -69,7 +69,7 @@ function Header() {
         </div>
         {/* MOBILE VIEW */}
         <div
-          className={`mt-5 md:flex items-start justify-start w-full flex-col lg:hidden 2xl:hidden xl:hidden ${showMenu}`}
+          className={`mt-5 md:flex items-start justify-start w-screen flex-col lg:hidden 2xl:hidden xl:hidden ${showMenu}`}
         >
           {menuItems.map((item) => {
             return (

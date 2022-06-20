@@ -34,15 +34,15 @@ function Home() {
   }, []);
   return (
     <Layout>
-      <div>
+      <div className="w-screen">
         {/* Intro section */}
-        <section id="intro" className="h-screen pt-24 bg-theme">
+        <section id="intro" className="h-screen pt-24 sm:pt-1 md:pt-1 bg-theme">
           <div
-            className="grid grid-cols-2 h-5/6 items-center border-4 md:grid-cols-1  md:border-0
-            mx-32 z-10 bg-theme
+            className="grid grid-cols-2 h-5/6 items-center border-4 sm:grid-cols-1 md:grid-cols-1 md:border-0
+            mx-32 sm:mx-3 md:mx-3 z-10 bg-theme
           border-white "
           >
-            <div className="h-1/2 justify-items">
+            <div className="h-1/2 sm:h-3/4 md:h-2/4 justify-items sm:-mt-10">
               <lottie-player
                 src="https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json"
                 background="transparent"
@@ -52,15 +52,21 @@ function Home() {
               ></lottie-player>
             </div>
 
-            <div className="font-bold text-white md:px-5 md:place-self-start">
-              <h1 className="text-7xl md:text-4xl" data-aos="zoom-in">
-                ASHVIN <br />
+            <div className="font-bold text-white sm:-mt-3 md:px-5 sm:place-self-center md:place-self-start ">
+              <h1
+                className="text-7xl sm:text-4xl md:text-4xl"
+                data-aos="zoom-in"
+              >
+                ASHVIN <br className="md:hidden" />
                 <b className="text-yellow-500">SUNGA</b>
               </h1>
-              <h1 className="text-4xl md:text-xl" data-aos="slide-left">
+              <h1
+                className="text-4xl sm:text-xl md:text-xl"
+                data-aos="slide-left"
+              >
                 <b className="text-orange-600">Full Stack Developer</b>
               </h1>
-              <div className="grid grid-cols-4 place-content-start mt-2 ">
+              <div className="grid grid-cols-4 place-content-start lg:mt-2">
                 <a
                   href="https://www.linkedin.com/in/ashvin-sunga/"
                   rel="noreferrer"
@@ -123,13 +129,13 @@ function Home() {
         <section id="tech" className="pt-20">
           <h1
             className="text-4xl md:text-2xl text-blue-800 font-bold text-center"
-            data-aos="slide-up"
+            data-aos="fade-down"
           >
             Technologies I've used so far
           </h1>
           <div
-            className="grid md:grid-cols-1 grid-cols-6 content-start"
-            data-aos="slide-left"
+            className="grid sm:grid-cols-3 grid-cols-6 content-start"
+            data-aos="fade-up"
           >
             <FaReact
               size={120}
@@ -162,10 +168,7 @@ function Home() {
               className="w-full text-center text-black mt-10"
             />
           </div>
-          <div
-            className="grid md:grid-cols-1 grid-cols-6"
-            data-aos="slide-right"
-          >
+          <div className="grid sm:grid-cols-3 grid-cols-6" data-aos="fade-up">
             <FaHtml5
               size={120}
               color="#EC6231"
@@ -211,18 +214,18 @@ function Home() {
               data-aos="fade-up"
             >
               <h1
-                className="text-3xl md:text-3xl"
+                className="text-3xl sm:text-xl md:text-3xl"
                 data-aos="zoom-in"
                 data-aos-delay="100"
               >
                 MY WORKS
               </h1>
               <h1
-                className="text-lg md:text-3xl"
+                className="text-lg sm:text-sm md:text-3xl"
                 data-aos="zoom-in"
                 data-aos-delay="300"
               >
-                Here you can find some of the projects I made so far
+                Here are the projects I made so far
               </h1>
             </div>
           </div>
@@ -255,7 +258,7 @@ function Home() {
 
         {/* Contact */}
         <section id="contact" className="grid grid-cols-2 md:grid-cols-1 pb-20">
-          <div className="h-screen md:mt-0">
+          <div className="h-full sm:h-3/4 md:mt-0">
             <lottie-player
               src="https://assets10.lottiefiles.com/packages/lf20_88z2psap.json"
               background="transparent"
@@ -265,9 +268,9 @@ function Home() {
             ></lottie-player>
           </div>
 
-          <div className="w-screen mt-20 md:-mt-24 md:ml-7">
+          <div className="flex justify-start sm:justify-center w-screen mt-14 sm:-mt-48 md:-mt-24">
             <div className="md:w-5/6 w-2/5 h-80% md:h-fit p-10 shadow-2xl bg-gray-50">
-              <h1 className="text-l font-semibold">
+              <h1 className="text-l sm:text-sm font-semibold">
                 If there's anything you want to know more about me, do not
                 hesitate to contact the number below or send an email.
               </h1>
