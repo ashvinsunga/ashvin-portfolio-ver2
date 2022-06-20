@@ -61,7 +61,7 @@ function Home() {
                 <b className="text-yellow-500">SUNGA</b>
               </h1>
               <h1
-                className="text-4xl sm:text-xl md:text-xl"
+                className="text-4xl sm:text-3xl md:text-3xl"
                 data-aos="slide-left"
               >
                 <b className="text-orange-600">Full Stack Developer</b>
@@ -257,8 +257,11 @@ function Home() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="grid grid-cols-2 md:grid-cols-1 pb-20">
-          <div className="h-full sm:h-3/4 md:mt-0">
+        <section
+          id="contact"
+          className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 pb-20 justify-items-center"
+        >
+          <div className="h-full sm:h-3/4">
             <lottie-player
               src="https://assets10.lottiefiles.com/packages/lf20_88z2psap.json"
               background="transparent"
@@ -268,8 +271,8 @@ function Home() {
             ></lottie-player>
           </div>
 
-          <div className="flex justify-start sm:justify-center w-screen mt-14 sm:-mt-48 md:-mt-24">
-            <div className="md:w-5/6 w-2/5 h-80% md:h-fit p-10 shadow-2xl bg-gray-50">
+          <div className="mt-14 sm:-mt-32 md:-mt-24">
+            <div className="sm:w-screen w-4/5 h-80% md:h-fit p-10 shadow-2xl bg-gray-50">
               <h1 className="text-l sm:text-sm font-semibold">
                 If there's anything you want to know more about me, do not
                 hesitate to contact the number below or send an email.

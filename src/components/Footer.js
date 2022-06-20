@@ -15,7 +15,7 @@ function Footer() {
           <div className="w-3/4">
             <div className="sm:text-sm text-xl sm:p-0 p-5 font-quicksand text-center">
               <p className="text-gray-50">Designed and Developed By</p>
-              <p className="text-gray-50 sm:my-0 my-1">Ashvin Sunga</p>
+              <p className="text-gray-50 pb-2 sm:my-0 my-1">Ashvin Sunga</p>
             </div>
           </div>
         </div>
