@@ -60,6 +60,14 @@ function Header() {
               </li>
             );
           })}
+          <li className='list-none mx-5 hover:bg-white font-extrabold px-4 rounded-sm hover:text-black hover:animate-pulse duration-150'>
+            <a
+              href='https://drive.google.com/file/d/16Qjpp8MqErkWN-vV-dwEXnSoYVJrqUZ7/view?usp=sharing'
+              target='_blank'
+              rel='noreferrer'>
+              RESUME
+            </a>
+          </li>
         </div>
         {/* MOBILE VIEW */}
         <div
@@ -75,6 +83,14 @@ function Header() {
               </li>
             );
           })}
+          <li className='list-none mt-5 hover:bg-white font-extrabold px-2 rounded-sm hover:text-black hover:animate-pulse duration-150'>
+            <a
+              href='https://drive.google.com/file/d/16Qjpp8MqErkWN-vV-dwEXnSoYVJrqUZ7/view?usp=sharing'
+              target='_blank'
+              rel='noreferrer'>
+              RESUME
+            </a>
+          </li>
         </div>
       </div>
     </div>
