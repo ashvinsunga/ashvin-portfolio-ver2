@@ -1,45 +1,31 @@
 const projectsData = [
   {
-    title: "GADGET AXIS",
-    image: "./ecommerce.svg",
+    title: 'ASHES STUFFS',
+    image: './ashes-stuffs.JPG',
     description:
-      "An ecommerce application developed using react , node , redux and mongodb",
-    link: "/",
+      'An ecommerce that I built for selling pre-loved items from 90s. Fully functional with Paypal payment system',
+    link: 'https://ashesstuffs.ashvinsunga.com',
   },
   {
-    title: "FLAGS",
-    image: "./pizzas.svg",
+    title: 'GADGET AXIS',
+    image: './gadget-axis.JPG',
     description:
-      "An ecommerce application developed using react , node , redux and mongodb",
-    link: "/",
+      'A rental system that I built for gadget owners where they can monitor the people who rented their gadget and the rental cost for it',
+    link: 'http://gadget-axis.com/',
   },
   {
-    title: "THE EVENTS",
-    image: "./hotels.svg",
+    title: 'THE EVENTS',
+    image: './the-events.JPG',
     description:
-      "An ecommerce application developed using react , node , redux and mongodb",
-    link: "/",
+      'An landing page the I built for my favorite artist. Shows when the event starts, its venue and other relevant information',
+    link: 'https://theevents.ashvinsunga.com',
   },
   {
-    title: "BSHS PORTAL",
-    image: "./jobs.svg",
+    title: 'COUNTRY FLAGS',
+    image: './country-flags.JPG',
     description:
-      "An ecommerce application developed using react , node , redux and mongodb",
-    link: "/",
-  },
-  {
-    title: "NETS",
-    image: "./socialmedia.svg",
-    description:
-      "An ecommerce application developed using react , node , redux and mongodb",
-    link: "/",
-  },
-  {
-    title: "NEWS APP",
-    image: "./cars.svg",
-    description:
-      "An ecommerce application developed using react , node , redux and mongodb",
-    link: "/",
+      'A simple web app that consumes information from an external API and lets you search different country flags and check its information. ',
+    link: 'https://countryflags.ashvinsunga.com/',
   },
 ];
 
